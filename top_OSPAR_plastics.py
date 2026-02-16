@@ -142,7 +142,7 @@ ax.add_artist(material_legend)  # Add this legend separately
 
 # plt.legend(loc='center', bbox_to_anchor=(0.75, 0.1))
 sns.despine(top=True, right=True, left=False, bottom=False)
-plt.savefig("python_figures/OSPAR_river_trial.svg", format="svg")
+# plt.savefig("python_figures/OSPAR_river_trial.svg", format="svg")
 
 plt.show()
 
@@ -170,7 +170,7 @@ bars2 = ax.barh(x, riverbanks_data,
 # Labels and Titles
 ax.set_xlabel('Percentage (%)')
 ax.set_ylabel('OSPAR category')
-ax.set_title('Top 25 Most Abundant OSPAR indexed items \n in Rivers and on Riverbanks')
+ax.set_title('Top 25 Most Common OSPAR indexed items \n in Rivers and on Riverbanks')
 ax.set_yticks(x)
 ax.set_yticklabels(average_data.index)
 ax.legend(loc='lower right')  # First legend for Rivers & Riverbanks
@@ -188,7 +188,7 @@ plt.tight_layout()
 # plt.legend(loc='center', bbox_to_anchor=(0.75, 0.1))
 sns.despine(top=True, right=True, left=False, bottom=False)
 
-plt.savefig("python_figures/OSPAR_riverbank_trial.svg", format="svg")
+# plt.savefig("python_figures/OSPAR_riverbank_trial.svg", format="svg")
 
 plt.show()
 

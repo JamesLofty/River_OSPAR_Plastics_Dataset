@@ -15,7 +15,7 @@ from collections import Counter
 from matplotlib import gridspec
 import re
 
-data = pd.read_excel("synthetic_data/synthetic_data_top_25.xlsx")
+data = pd.read_excel("synthetic_data/synthetic_data_top25.xlsx")
 
 # %%
 
@@ -31,6 +31,10 @@ material_colors['Rubber'] = '#66bad9'
 
 # %%
 
+
+
+# %%
+
 data_flat = data[
     # (data['Flatness_F'].between(0, 0.4)) &
     # (data['Elongation_E'].between(0, 1)) 
@@ -40,7 +44,6 @@ data_flat = data[
     # (data['Density_rho'].between(0, 1000))
     (data['flexibility'] == 'f')
 ]
-
 
 plt.figure()
 plt.scatter(data_flat['Flatness_F'], data_flat['Elongation_E'])
@@ -130,13 +133,12 @@ sns.kdeplot(data['Elongation_E'], ax=ax_histy, fill=True, bw = 0.2, alpha=0.5, l
 ax_histx.axis('off')
 ax_histy.axis('off')
 
-
 markers = ['d', 's', 'D', '^', 'v', '<', '>', 'P', '*', 'X', 'H']
-ordered_names = sorted(data['common name'].unique())
+ordered_names = sorted(data['Common name'].unique())
 marker_map = {name: markers[i % len(markers)] for i, name in enumerate(ordered_names)}
 
 # Loop over each (material, common name) group
-for (material, common_name), df_group in data.groupby(['material', 'common name']):
+for (material, common_name), df_group in data.groupby(['material', 'Common name']):
     mean_elong = df_group['Elongation_E'].mean()
     mean_flat = df_group['Flatness_F'].mean()
 
@@ -187,6 +189,6 @@ ax_scatter.hlines(0.66, 0, 1, color='k', ls="--", zorder = 10)
 ax_scatter.set_xlim(0, 1)
 ax_scatter.set_ylim(0, 1)
 ax_scatter.legend(loc='upper left', title = 'River-OSPAR category', bbox_to_anchor=(1.05, 1),   borderaxespad=0.)
-plt.savefig(f"python_figures/EL vs FL.svg", format='svg')
+# plt.savefig(f"python_figures/EL vs FL.svg", format='svg')
 
 plt.show()
