@@ -1,8 +1,9 @@
 Data and codes supporting the publication 'The Shapes and Sizes of Macroplastics and Other litter in Rivers' DOI:.... PrePrint:.... 
+---
 
 ### OSPAR_meta_analysis.xlsx
 Workbook containing the meta-analysis inputs used in the study.
-
+---
 ## Synthetic data
 ### synthetic_data_all.xlsx
 Workbook containing the material and geometric properties of all **229,196 litter items** across River-OSPAR categories.
