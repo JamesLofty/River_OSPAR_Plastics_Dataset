@@ -1,4 +1,4 @@
-Data and codes supporting the publication 'The Shapes and Sizes of Macroplastics and Other litter in rivers' DOI: 
+Data and codes supporting the publication 'The Shapes and Sizes of Macroplastics and Other litter in Rivers' DOI:.... PrePrint:.... 
 
 ### OSPAR_meta_analysis.xlsx
 Workbook containing the meta-analysis inputs used in the study.
